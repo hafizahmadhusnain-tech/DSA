@@ -1,0 +1,177 @@
+Question 01:
+Stack (Undo Operation in Text Editor)
+Real-World Scenario
+Imagine a text editor application similar to Notepad or Microsoft Word. When a user writes text and performs operations like:
+
+inserting text
+
+deleting text
+
+formatting text
+
+the application allows the user to press an Undo button to revert the previous action.
+
+This functionality is implemented using a Stack data structure.
+
+
+Question 02:
+Infix to Postfix Expression Using Stack
+Real-World Scenario
+Many applications like scientific calculators, compilers, and expression evaluators process mathematical expressions entered by users.
+
+Users write expressions in infix notation, for example:
+
+A + B * C
+However, computers process expressions more efficiently in postfix notation.
+
+Example:
+
+ABC*+
+Why Postfix is Preferred?
+Postfix expressions eliminate the need for:
+
+parentheses
+
+operator precedence rules during evaluation
+
+This makes evaluation simpler using stack operations.
+
+Example Conversion
+Convert the following infix expression to postfix:
+
+(A + B) * (C – D) / E
+Expected postfix form:
+
+AB+CD-*E/
+Student Tasks
+Students must:
+
+Explain the difference between infix and postfix expressions
+
+Show step-by-step stack operations
+
+Draw a diagram for the conversion process
+
+Write a C++ program for infix to postfix conversion
+
+
+Question 03:
+Circular Queue (Printer Job Scheduling)
+Real-World Scenario
+Consider a computer lab printer system in a university. Multiple students send print jobs to the printer. The printer processes requests one by one, forming a queue.
+
+However, a normal queue wastes memory after several deletions. To solve this problem, systems use a Circular Queue.
+
+What is a Circular Queue?
+A circular queue connects the last position of the queue back to the first position, forming a circle.
+
+This allows efficient memory usage.
+
+Example queue size:
+
+Size = 5
+Operations:
+
+Insert: P1, P2, P3, P4
+Delete: 2 jobs
+Insert: P5, P6
+Students must track:
+
+Front pointer
+
+Rear pointer
+
+Student Tasks
+Students must:
+
+Explain why circular queue is better than linear queue
+
+Simulate operations step-by-step
+
+Show front and rear positions
+
+Write a C++ program implementing circular queue
+
+Question 04:
+Priority Queue (Hospital Emergency System)
+Real-World Scenario
+In a hospital emergency room, patients are not treated in arrival order. Instead, they are treated based on the severity of their condition.
+
+Example patient list:
+
+Patient	Priority
+John	2
+Sara	5
+Ahmed	1
+Ali	4
+
+
+A higher number indicates higher priority.
+
+So the treatment order becomes:
+
+Sara → Ali → John → Ahmed
+What is a Priority Queue?
+A Priority Queue is a special type of queue where elements are removed based on priority rather than arrival order.
+
+Applications include:
+
+Operating system scheduling
+
+Emergency services
+
+Network packet routing
+
+CPU task management
+
+Student Tasks
+Students must:
+
+Explain how priority queues manage urgent tasks
+
+Insert patients into the queue
+
+Determine treatment order
+
+Write a C++ program implementing a priority queue
+
+Question 05:
+Double-Ended Queue (Deque) for Task Scheduling
+Real-World Scenario
+Modern web servers and operating systems manage tasks based on urgency.
+
+Some tasks must be executed immediately, while others can wait.
+
+For this purpose, systems use a Double-Ended Queue (Deque).
+
+A deque allows insertion and deletion from both ends.
+
+Example Operations
+InsertFront(Task1)
+InsertRear(Task2)
+InsertFront(Task3)
+DeleteRear()
+InsertRear(Task4)
+Deque state changes during execution.
+
+Why Is Deque Useful?
+Deque is widely used in:
+
+CPU scheduling
+
+Browser history
+
+Sliding window algorithms
+
+Job scheduling systems
+
+Student Tasks
+Students must:
+
+Explain the difference between queue and deque
+
+Perform given operations
+
+Show the state after each step
+
+Write a C++ program implementing deque.

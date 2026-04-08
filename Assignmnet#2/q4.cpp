@@ -9,50 +9,50 @@ struct Patient {
 class PriorityQueue {
 private:
     Patient *arr;
-    int size;
     int cap;
+    int size;
 
 public:
     PriorityQueue(int s) {
-        size = s;
-        arr = new Patient[size];
-        cap = 0;
+        cap = s;
+        arr = new Patient[cap];
+        size = 0;
     }
 
     void insert(string n, int p) {
-        if (cap == size) {
+        if (size == cap) {
             cout << "Queue is Full.\n";
             return;
         }
 
         int i;
-        for (i = cap - 1; i >= 0 && arr[i].priority < p; i--) {
+        for (i = size - 1; i >= 0 && arr[i].priority < p; i--) {
             arr[i + 1] = arr[i]; // shift right
         }
 
         arr[i + 1].name = n;
         arr[i + 1].priority = p;
-        cap++;
+        size++;
     }
 
     void treatPatient() {
-        if (cap == 0) {
+        if (size == 0) {
             cout << "Queue is Empty!\n";
             return;
         }
 
         cout << "Treating: " << arr[0].name << endl;
 
-        for (int i = 1; i < cap; i++) {
+        for (int i = 1; i < size; i++) {
             arr[i - 1] = arr[i];
         }
 
-        cap--;
+        size--;
     }
 
     void display() {
         cout << "\nPriority Queue (High to Low):\n";
-        for (int i = 0; i < cap; i++) {
+        for (int i = 0; i < size; i++) {
             cout << arr[i].name << " (" << arr[i].priority << ")\n";
         }
     }
