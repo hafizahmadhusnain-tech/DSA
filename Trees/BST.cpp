@@ -86,16 +86,21 @@ void InOrder(Node* root){
 
 int main(){
     Node* root = NULL;
-    vector<int> vals = {50,60,40,25,30,47,45,55,65};
-    for(int val: vals){
-        root = insert(root,val);
-    }
+    int arr[] = {50,30,70,20,40,60,80};
 
+    for(int x : arr)
+        root = insert(root,x);
+    cout << "Tree after insertion: ";    
     InOrder(root);
     cout << endl;
-    root = deleteNode(root,60);
+    root = deleteNode(root,30);
+
+    if(search(root,60))
+        cout<<"Value Found\n";
+    else
+        cout<<"Value Not Found\n";
+    cout << "Tree after deletion: ";    
     InOrder(root);
-
-
+    cout << endl;
     return 0;
 }

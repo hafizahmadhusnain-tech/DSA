@@ -97,12 +97,12 @@ Node* insertNode(Node* root,int key){
 
 int main(){
     Node* root = NULL;
-    root = insertNode(root,10);
-    root = insertNode(root,20);
     root = insertNode(root,30);
-    root = insertNode(root,40);
-    root = insertNode(root,50);
+    root = insertNode(root,20);
+    root = insertNode(root,10);
     root = insertNode(root,25);
+    root = insertNode(root,28);
+    cout << "InOrder Traversal of AVL Tree: ";
     InOrder(root);
     cout << endl;
 
