@@ -83,11 +83,11 @@ Node* insertNode(Node* root,int key){
         return LeftRotate(root);
     }
      if(balance > 1 && key > root->left->data){
-        root = LeftRotate(root->left);
+        root->left = LeftRotate(root->left);
         return RightRotate(root);
     }
      if(balance < -1 && key < root->right->data ){
-        root = RightRotate(root->right);
+        root->right = RightRotate(root->right);
         return LeftRotate(root);
     }
     
